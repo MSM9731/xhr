@@ -27,11 +27,11 @@ function xhr(setting) {
   };
 
   // onreadystatechange
-  if (!setting.onreadystatechange) {
-    setting.onreadystatechange = function() {}
+  if (!setting.readystatechange) {
+    setting.readystatechange = function() {}
   }
   xhr.onreadystatechange = function () {
-    setting.onreadystatechange(xhr.response);
+    setting.readystatechange(xhr.response);
   };
 
   // open
