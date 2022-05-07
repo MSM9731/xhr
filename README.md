@@ -22,3 +22,18 @@ xhr({
   readystatechange: callback(response)
 })
 ```
+And the inputs are completed this way:
+`method (String)(optional)('GET' by default)`
+The method you send the request with
+
+`url (String)(required)`
+The Url to which you send the request
+
+`async (Boolean)(optional)(true by default)`
+Manage requests synchronously
+
+`header (Object)(optional)(empty object by default)`
+Set request headers
+
+`success, fail, always,readystatechange (Function)(optional)(empty function by default)`
+Some function for managing request response
