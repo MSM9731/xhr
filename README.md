@@ -9,31 +9,17 @@ First, add the xhr.js from your Javascript folder to the project:
 Then, you can send an Ajax request and manage the response as follows:
 ```javascript
 xhr({
-  method: 'GET | POST',
-  url: url,
-  async: true | false,
-  headers: {
-    headerName1: headerValue1,
-    headerName2: headerValue2
-  },
-  success: callback(response),
-  fail: callback(response),
-  always: callback(response),
-  readystatechange: callback(response)
+  method: 'GET | POST' (optional, POST by default),
+  url: URL (requaired),
+  Async: true | false (optional, true by default),
+  data: FormData | Json (optional, empty string by default),
+  contentType: String (optional, 'application/x-www-form-urlencoded; charset=UTF-8' by default),
+  accept: String (optional, '*/*' bby default),
+  XRequestedWith: String (optional, 'XMLHttpRequest' by default),
+  headers: Json (optional, null by default),
+  success: callback(response) (optional, POST by default),
+  fail: callback(response) (optional, POST by default),
+  always: callback(response) (optional, POST by default),
+  readystatechange: callback(response) (optional, POST by default)
 })
 ```
-And the inputs are completed this way:
-`method (String)(optional)('GET' by default)`
-The method you send the request with
-
-`url (String)(required)`
-The Url to which you send the request
-
-`async (Boolean)(optional)(true by default)`
-Manage requests synchronously
-
-`header (Object)(optional)(empty object by default)`
-Set request headers
-
-`success, fail, always,readystatechange (Function)(optional)(empty function by default)`
-Some function for managing request response
