@@ -42,8 +42,8 @@ function xhr(setting) {
   // open
   if (!setting.method) setting.method = 'GET';
   if (setting.method === 'GET') setting.url += '?' + data;
-  if (setting.Async !== false) setting.Async = true;
-  xhr.open(setting.method.toUpperCase(), setting.url, !setting.Async);
+  if (setting.async !== false) setting.async = true;
+  xhr.open(setting.method.toUpperCase(), setting.url, !setting.async);
 
   // headers
   if (!setting.contentType && setting.contentType !== '') {
